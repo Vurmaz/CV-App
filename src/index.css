@@ -1,0 +1,101 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  min-height: 100vh;
+}
+#body {
+  background-color: #d8e9a8;
+}
+.print-page {
+  background-color: white;
+  border: 1px solid black;
+  width: 210mm;
+  height: 297mm;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.contact {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+.name-contanier {
+  display: flex;
+  gap: 1rem;
+}
+.photo-frame {
+  width: 180px;
+  margin-top: 2rem;
+  margin-left: 8rem;
+}
+.image {
+  width: 100%;
+}
+.contact-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.education {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.school {
+  display: flex;
+  flex-direction: column;
+}
+.MuiFormControl-root {
+  width: 100%;
+}
+.MuiGrid-root {
+  width: 100%;
+}
+.fade {
+  animation: FadeIn 1s ease-in-out;
+}
+@keyframes FadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@font-face {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Nunito Regular"), local("Nunito-Regular"),
+    url(https://fonts.gstatic.com/s/nunito/v11/XRXV3I6Li01BKofINeaBTMnFcQ.woff2)
+      format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+@media screen and (max-width: 600px) {
+  h3 {
+    font-size: 2rem;
+  }
+}
