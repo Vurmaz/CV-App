@@ -9,31 +9,11 @@ import Interest from "./components/Form/Interest"
 import Switch from "./components/Switch"
 import Grid from '@mui/material/Grid'
 import useMediaQuery from '@mui/material/useMediaQuery';
-import { createTheme, ThemeProvider, responsiveFontSizes  } from '@mui/material/styles';
+import { theme } from "./theme"
+import { ThemeProvider } from '@mui/material/styles';
 
 
-let theme = createTheme({
-  typography: {
-    fontFamily: [
-      'Nunito',
-      'Roboto',
-      '"Helvetica Neue"',
-      'Arial',
-      'sans-serif'
-    ].join(','),
-  },
-  palette: {
-    primary: {
-      main: '#4E9F3D',
-      contrastText: '#fff',
-    },
-    secondary: {
-      main: '#D8E9A8',
-      contrastText: '#000',
-    },
-  },
-});
-theme = responsiveFontSizes(theme)
+
 
 function App() {
   const [contact, setContact] = useState({firstname:'', secondname:'', email:'', phone:'', adress:'', photo:""})
@@ -58,16 +38,20 @@ function App() {
     if(Object.values(education).every((item) => item !== "")){
       setEducational([...educational, education])
       setEducation({school:'', subject:'', from:'', to:''})
+    } else {
+      setEducationAnchor(educationAnchor ? null : event.currentTarget)
     }
-    setEducationAnchor(educationAnchor ? null : event.currentTarget)
+    
   }
   const submitWork = (event) => {
     event.preventDefault()
     if(Object.values(work).every((item) => item !== "")){
       setExperiance([experiance, work])
       setWork({company:'', role:'', from:'', to:''})
-    }    
-    setWorkAnchor(workAnchor ? null : event.currentTarget)
+    } else {
+      setWorkAnchor(workAnchor ? null : event.currentTarget)
+    }
+    
   }
   const changeContact = (event) => {
     const name = event.target.name

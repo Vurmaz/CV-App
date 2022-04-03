@@ -71,6 +71,7 @@ body {
 .MuiGrid-root {
   width: 100%;
 }
+
 .fade {
   animation: FadeIn 1s ease-in-out;
 }

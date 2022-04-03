@@ -17,7 +17,7 @@ function Education({changeEducationYear, education, changeEducation, submitEduca
     return(
         <CssBaseline>
         <ClickAwayListener onClickAway={clickAwayEducation}>
-            <Box component="form" noValidate autoComplete="off" onSubmit={(event)=>submitEducation(event)}>
+            <Box component="form" noValidate  onSubmit={(event)=>submitEducation(event)}>
                 <Grid container direction="column" alignItems="center" justifyContent="center" spacing={1} width="70%" margin="0 auto" >
                 <Typography marginTop={6} variant='h3' textAlign="center">Education Informations</Typography>
                     <Grid item width="100%">
@@ -59,10 +59,8 @@ function Education({changeEducationYear, education, changeEducation, submitEduca
                                         openTo="year"
                                         views={["year", "month"]}
                                         onChange={(event) => changeEducationYear(event, 2)}
-                                        renderInput={(params) => <TextField {...params} />}
-                                        fullWidth
-                                        color="primary"
-                                        focused 
+                                        renderInput={(params) => <TextField {...params} error={false}/>}
+                                        fullWidth  
                                     />
                                 </LocalizationProvider> 
                             </Grid>
@@ -74,11 +72,10 @@ function Education({changeEducationYear, education, changeEducation, submitEduca
                                         openTo="year"
                                         views={["year", "month"]}
                                         onChange={(event) => changeEducationYear(event, 3)}
-                                        renderInput={(params) => <TextField {...params} />}
+                                        renderInput={(params) => <TextField {...params} error={false}  />}
                                         fullWidth
                                         color="primary"
-                                        focused
-                                        
+                                        focused  
                                     />
                             </LocalizationProvider> 
                             </Grid>

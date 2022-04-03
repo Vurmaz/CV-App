@@ -6,7 +6,7 @@ import AdapterDateFns from '@mui/lab/AdapterDateFns';
 import LocalizationProvider from '@mui/lab/LocalizationProvider';
 import DatePicker from '@mui/lab/DatePicker';
 import Grid from '@mui/material/Grid'
-import  CssBaseline  from '@mui/material/CssBaseline';
+import CssBaseline  from '@mui/material/CssBaseline';
 import Typography from "@mui/material/Typography"
 import Popper from '@mui/material/Popper';
 import ClickAwayListener from '@mui/material/ClickAwayListener';
@@ -59,7 +59,7 @@ function Experiance({changeWorkYear, work, changeWork, submitWork, workAnchor, c
                                         openTo="year"
                                         views={["year", "month"]}
                                         onChange={(event) => changeWorkYear(event, 2)}
-                                        renderInput={(params) => <TextField {...params} />}
+                                        renderInput={(params) => <TextField {...params} error={false}/>}
                                         fullWidth
                                         color="primary"
                                         focused 
@@ -74,7 +74,7 @@ function Experiance({changeWorkYear, work, changeWork, submitWork, workAnchor, c
                                         openTo="year"
                                         views={["year", "month"]}
                                         onChange={(event) => changeWorkYear(event, 3)}
-                                        renderInput={(params) => <TextField {...params} />}
+                                        renderInput={(params) => <TextField {...params} error={false}/>}
                                         fullWidth
                                         color="primary"
                                         focused
